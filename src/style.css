@@ -39,6 +39,7 @@ h1 {
 .weather-condition {
   font-size: 13px;
   line-height: 15px;
+  text-transform: capitalize;
 }
 
 .sunny {
@@ -47,16 +48,16 @@ h1 {
   margin-right: 8px;
 }
 
+
+.temp-value .units {
+    position: relative;
+    margin-top: 5px;
+}
+
 .temp-value {
     font-size: 45px;
     line-height: 1;
     font-weight: bolder;
-}
-
-.temp-value .units {
-    position: relative;
-    font-size: 1;
-    top: 5px;
 }
 
 ul {
