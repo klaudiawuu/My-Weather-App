@@ -9,6 +9,7 @@
   <title>Weather App</title>
 </head>
     <div class="container">
+      <div class="whole-app">
       <div class="my-weather-app">
       <h1>
         Lisbon
@@ -21,10 +22,13 @@
     </div>
     <div class="row">
       <div class="col-6">
-        <img class="sunny" src="https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/512x512/shadow/sun.png"
+        <div class="clearfix">
+        <img class="sunny" src="images/sun.png"
         alt="Clear" width="70"
         />
-        17 °C | °F
+        <span class="temp-value">17</span>
+        <span class="units">°C | °F</span>
+        </div>
       </div>
       <div class="col-6">
         <ul>
@@ -41,12 +45,12 @@
         </ul>
       </div>
     </div>
+    </div>
     <small class="source">
       <a href="https://github.com/klaudiawuu/Weather-App" target="_blank">Open-source code 
         </a>
         by Klaudia Wawrzynczyk
     </small>
-
     </div>
     </div>
   <script src="src/app.js"></script>

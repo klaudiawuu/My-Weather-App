@@ -1,15 +1,18 @@
 body {
-background-image: url("https://images.pexels.com/photos/2931915/pexels-photo-2931915.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
+  background-image: url("https://images.pexels.com/photos/2931915/pexels-photo-2931915.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.whole-app {
+  max-width: 600px;
+  margin: 30px auto;
 }
 
 .my-weather-app {
-  max-width: 650px;
-  margin: 50px auto;
   padding: 25px;
   border: 1px solid rgb(122, 185, 228);
   border-radius: 8px;
@@ -17,45 +20,58 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
-    color: rgb(97, 93, 93);
-    font-size: 30px;
-    line-height: 28px;
+  color: rgb(97, 93, 93);
+  font-size: 30px;
+  font-weight: 100;
+  line-height: 28px;
 }
 
 .day {
-    font-size: 17px;
-    line-height: 19px;
+  font-size: 13px;
+  line-height: 15px;
 }
 
 .hour {
-    font-size: 17px;
-    line-height: 19px;
+  font-size: 13px;
+  line-height: 15px;
 }
 
 .weather-condition {
-    font-size: 17px;
-    line-height: 19px;
+  font-size: 13px;
+  line-height: 15px;
 }
 
 .sunny {
-    margin: 20px;
+  margin: 15px;
+  margin-left: 5px;
+  margin-right: 8px;
+}
 
+.temp-value {
+    font-size: 45px;
+    line-height: 1;
+    font-weight: bolder;
+}
+
+.temp-value .units {
+    position: relative;
+    font-size: 1;
+    top: 5px;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 li {
-    display: block;
-    list-style: none;
-    font-size: 16px;
-    line-height: 19px;
-
+  display: block;
+  list-style: none;
+  font-size: 13px;
+  line-height: 15px;
 }
 
 .source {
-    font-size: 10px;
-    margin: 0 auto;
+  font-size: 10px;
+  margin: 0 auto;
 }
