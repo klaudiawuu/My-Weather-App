@@ -27,6 +27,9 @@ function actualDate(timestamp) {
 
 function displayTemp(response) {
 
+  console.log(response.data);
+
+
   let city = document.querySelector("h1");
   city.innerHTML = response.data.name;
 
@@ -47,9 +50,15 @@ function displayTemp(response) {
 
   let dayTime = document.querySelector("#day");
   dayTime.innerHTML = actualDate(response.data.dt * 1000);
+
+  let trueIcon = response.data.weather[0].icon;
+
+  let icon = document.querySelector("#icon");
+  icon.setAttribute("src", `http://openweathermap.org/img/wn/${trueIcon}@2x.png`);
 }
 
 let apiKey = "a367566821d5256a1c920a360eab8e9e";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=metric`;
+let city = "Lisbon"
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemp);
