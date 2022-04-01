@@ -40,7 +40,7 @@ function displayTemp(response) {
   condition.innerHTML = response.data.weather[0].description;
 
   let realFeel = document.querySelector("#real-feel");
-  realFeel.innerHTML = Math.round(response.data.main.feels_like);
+  realFeel.innerHTML = `${Math.round(response.data.main.feels_like)}°C`;
 
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = response.data.main.humidity;
@@ -55,6 +55,9 @@ function displayTemp(response) {
 
   let icon = document.querySelector("#icon");
   icon.setAttribute("src", `http://openweathermap.org/img/wn/${trueIcon}@2x.png`);
+
+  celciusTemperature = response.data.main.temp;
+
 }
 
 function searchCity(city) {
@@ -70,7 +73,31 @@ function submitCity(event) {
   searchCity(selectedCity.value);
 }
 
-searchCity("Lisbon");
+function fahrenheitTemp(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  let temp = document.querySelector("#temperature");
+  temp.innerHTML = Math.round(fahrenheitTemperature);
+
+}
+
+function celciusTemp(event) {
+  event.preventDefault();
+  let temp = document.querySelector("#temperature");
+  temp.innerHTML = Math.round(celciusTemperature);
+}
+
+let celciusTemperature = null;
+
+
 
 let form = document.querySelector("#search-city");
 form.addEventListener("submit", submitCity)
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", fahrenheitTemp)
+
+let celcius = document.querySelector("#celcius");
+celcius.addEventListener("click", celciusTemp);
+
+searchCity("Lisbon");

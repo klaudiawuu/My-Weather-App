@@ -60,6 +60,7 @@ img {
 .temp-value .units {
   position: relative;
   margin-top: 5px;
+  
 }
 
 .temp-value {
@@ -67,6 +68,8 @@ img {
   line-height: 1;
   font-weight: bolder;
 }
+
+.units
 
 ul {
   margin: 0;
@@ -85,3 +88,4 @@ li {
   font-size: 10px;
   margin: 0 auto;
 }
+
