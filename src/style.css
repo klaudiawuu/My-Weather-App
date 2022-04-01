@@ -21,9 +21,11 @@ body {
 
 h1 {
   color: rgb(97, 93, 93);
-  font-size: 30px;
+  font-size: 34px;
   font-weight: 100;
   line-height: 28px;
+  margin-top: 15px;
+  font-weight: bold;
 }
 
 .day {

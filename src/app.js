@@ -57,8 +57,20 @@ function displayTemp(response) {
   icon.setAttribute("src", `http://openweathermap.org/img/wn/${trueIcon}@2x.png`);
 }
 
-let apiKey = "a367566821d5256a1c920a360eab8e9e";
-let city = "Lisbon"
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+function searchCity(city) {
 
-axios.get(apiUrl).then(displayTemp);
+  let apiKey = "a367566821d5256a1c920a360eab8e9e";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemp);
+}
+
+function submitCity(event) {
+  event.preventDefault();
+  let selectedCity = document.querySelector("#selected-city");
+  searchCity(selectedCity.value);
+}
+
+searchCity("Lisbon");
+
+let form = document.querySelector("#search-city");
+form.addEventListener("submit", submitCity)

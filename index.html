@@ -18,18 +18,33 @@
   <div class="container">
     <div class="whole-app">
       <div class="my-weather-app">
+        <form id="search-city">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="City name"
+                class="form-control"
+                id="selected-city"
+                autocomplete="off"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="btn btn-outline-secondary"
+              />
+            </div>
+          </div>
+        </form>
         <h1></h1>
         <div class="day">Last updated: <span id="day">Friday 10:00</span></div>
         <div class="weather-condition" id="condition"></div>
         <div class="row">
           <div class="col-6">
             <div class="clearfix weather-temperature">
-              <img 
-              src=""
-              id = "icon"
-              alt="Clear"
-              class="float-left"
-              />
+              <img src="" id="icon" alt="Clear" class="float-left" />
               <span class="temp-value" id="temperature"></span>
               <span class="units">°C | °F</span>
             </div>
