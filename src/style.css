@@ -31,6 +31,10 @@ h1 {
   line-height: 15px;
 }
 
+.day:first-letter {
+  text-transform: capitalize;
+}
+
 .hour {
   font-size: 13px;
   line-height: 15px;
@@ -39,6 +43,9 @@ h1 {
 .weather-condition {
   font-size: 13px;
   line-height: 15px;
+}
+
+.weather-condition:first-letter {
   text-transform: capitalize;
 }
 
@@ -48,16 +55,15 @@ h1 {
   margin-right: 8px;
 }
 
-
 .temp-value .units {
-    position: relative;
-    margin-top: 5px;
+  position: relative;
+  margin-top: 5px;
 }
 
 .temp-value {
-    font-size: 45px;
-    line-height: 1;
-    font-weight: bolder;
+  font-size: 45px;
+  line-height: 1;
+  font-weight: bolder;
 }
 
 ul {
