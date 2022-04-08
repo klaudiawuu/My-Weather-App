@@ -53,7 +53,7 @@ function showForecast(response) {
         `
   
           <div class="col-2">
-            <div class="weather-forecast-tomorrow">${formatWeekDays(
+            <div class="weather-forecast-day">${formatWeekDays(
               forecastDay.dt
             )}</div>
             <img
@@ -136,28 +136,9 @@ function submitCity(event) {
   searchCity(selectedCity.value);
 }
 
-function fahrenheitTemp(event) {
-  event.preventDefault();
-  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
-  let temp = document.querySelector("#temperature");
-  temp.innerHTML = Math.round(fahrenheitTemperature);
-}
 
-function celciusTemp(event) {
-  event.preventDefault();
-  let temp = document.querySelector("#temperature");
-  temp.innerHTML = Math.round(celciusTemperature);
-}
-
-let celciusTemperature = null;
 
 let form = document.querySelector("#search-city");
 form.addEventListener("submit", submitCity);
-
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", fahrenheitTemp);
-
-let celcius = document.querySelector("#celcius");
-celcius.addEventListener("click", celciusTemp);
 
 searchCity("Lisbon");

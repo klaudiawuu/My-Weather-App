@@ -13,7 +13,8 @@ body {
 }
 
 .my-weather-app {
-  padding: 25px;
+  padding: 30px;
+  padding-right: 50px;
   border: 1px solid rgb(122, 185, 228);
   border-radius: 8px;
   background-color: rgb(201, 234, 250);
@@ -57,19 +58,17 @@ img {
   margin-right: 0;
 }
 
-.temp-value .units {
-  position: relative;
-  margin-top: 5px;
-  
-}
-
 .temp-value {
   font-size: 45px;
   line-height: 1;
   font-weight: bolder;
 }
 
-.units
+.units {
+  font-size: 25px;
+  position: absolute;
+  padding-top: 13px;
+}
 
 ul {
   margin: 0;
@@ -82,6 +81,16 @@ li {
   list-style: none;
   font-size: 13px;
   line-height: 15px;
+}
+
+.weather-forecast {
+  font-size: 14px;
+  text-align: center;
+
+}
+
+.forecast-temp-min {
+  opacity: 0.7;
 }
 
 .source {
