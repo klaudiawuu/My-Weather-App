@@ -27,8 +27,8 @@ function actualDate(timestamp) {
 
 function formatWeekDays(timestamp) {
   let date = new Date(timestamp * 1000);
-  let day = date.getDay();
-  let days = [
+  let weekDay = date.getDay();
+  let weekDays = [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -38,7 +38,7 @@ function formatWeekDays(timestamp) {
     "Saturday",
   ];
 
-  return days[day];
+  return weekDays[weekDay];
 }
 
 function showForecast(response) {
